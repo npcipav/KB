@@ -74,10 +74,3 @@ class DiaryDBHelper:
                     self._run(query)
                 return self._cursor.fetchall()
         except sqlite3.Error: print('sqlite3.Error')
-
-
-def test(): pass
-
-
-if __name__ == '__main__':
-    test()

@@ -25,6 +25,9 @@ class DiaryManager:
         # Init msgs.
         self._recs = list(map(castTupleToRecord, self._db.find()))
 
+    def getRecs(self):
+        return self._recs
+
     def addRec(self, rec):
         """ Adds record. """
         self._db.add(rec.date, rec.text, rec.tags)
@@ -68,14 +71,7 @@ class DiaryManager:
         # One of observable method, see the Observer Disign Pattern for
         # details.
         for o in self._observers:
-            o.updateRecList(self._recs)
+            o.updateRecList()
 
 
 __all__ = [DiaryManager]
-
-
-def test(): pass
-
-
-if __name__ == '__main__':
-    test()

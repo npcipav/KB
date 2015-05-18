@@ -58,10 +58,3 @@ class EditRecWindow(QtGui.QWidget):
         else:
             self._model.addRec(Record(date, text))
         self.close()
-
-
-def test(): pass
-
-
-if __name__ == '__main__':
-    test()

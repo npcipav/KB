@@ -17,10 +17,3 @@ class Record:
         self.tags = [
             word for word in text.split(' ') if word.startswith('#')
             ]
-
-
-def test(): pass
-
-
-if __name__ == '__main__':
-    test()

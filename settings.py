@@ -15,10 +15,3 @@ class Settings:
         self._dbFileName = name
 
 settings = Settings()
-
-
-def test(): pass
-
-
-if __name__ == '__main__':
-    test()

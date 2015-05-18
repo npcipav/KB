@@ -126,21 +126,10 @@ class MainWindow(QtGui.QWidget):
              .replace('?', ' ')
         self._model.updateTags(query.split(' '))
 
-    def updateRecList(self, recs):
-        """
-        Updates records list on display. It's used by
-        DiaryManager like observer's handler method.
-        """
+    def updateRecList(self):
         self._recList.clear()
-        for rec in recs:
+        for rec in self._model.getRecs():
             self._recList.addItem(RecordView(rec))
 
 
 __all__ = [MainWindow]
-
-
-def test(): pass
-
-
-if __name__ == '__main__':
-    test()
